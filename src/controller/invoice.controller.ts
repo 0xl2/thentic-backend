@@ -32,7 +32,7 @@ const cancelInvoice = wrapRequestAsync(async (req: Request, res: Response) => {
 });
 
 const showInvoices = wrapRequestAsync(async (req: Request, res: Response) => {
-    const reqBody = req.body;
+    const reqBody = req.query;
     const respData = await axios.get(`${Config.api.base_url}invoices/all`, {
         params: {
             key: Config.api.api_key,

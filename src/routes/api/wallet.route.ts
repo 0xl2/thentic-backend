@@ -8,7 +8,7 @@ router.post(
     WalletController.createWallet
 );
 
-router.post(
+router.get(
     '/show_wallets',
     WalletController.showWallets
 );

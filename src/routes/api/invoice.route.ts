@@ -13,7 +13,7 @@ router.post(
     InvoiceController.cancelInvoice
 );
 
-router.post(
+router.get(
     '/show_invoices',
     InvoiceController.showInvoices
 );

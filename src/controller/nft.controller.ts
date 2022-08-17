@@ -46,7 +46,7 @@ const transferNFT = wrapRequestAsync(async (req: Request, res: Response) => {
 });
 
 const showContracts = wrapRequestAsync(async (req: Request, res: Response) => {
-    const reqBody = req.body;
+    const reqBody = req.query;
     const respData = await axios.get(`${Config.api.base_url}contracts`, {
         params: {
             key: Config.api.api_key,
@@ -55,11 +55,11 @@ const showContracts = wrapRequestAsync(async (req: Request, res: Response) => {
         ...Config.req_header
     });
 
-    uResponse(res, respData, httpStatus.OK);
+    uResponse(res, respData.data, httpStatus.OK);
 });
 
 const showNFTs = wrapRequestAsync(async (req: Request, res: Response) => {
-    const reqBody = req.body;
+    const reqBody = req.query;
     const respData = await axios.get(`${Config.api.base_url}nfts`, {
         params: {
             key: Config.api.api_key,
