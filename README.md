@@ -1,3 +1,3 @@
-# uzu-marketplace-backend
+# thentic-api-backend
 
-This is the repo for backend services of UZU NFT marketplace development.
+This is the repo for backend services of THENTIC apis integration DAPP development.
